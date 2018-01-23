@@ -28,3 +28,4 @@ class Translated_products(db.Model):
     id = db.Column (db.Integer, primary_key=True)
     name = db.Column(db.String(1000))
     rep_id= db.Column(db.Integer, db.ForeignKey('reps.id'))
+    rep_rep=db.relationship('Rep')

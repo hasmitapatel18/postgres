@@ -18,23 +18,22 @@ class CSVImport:
                 #dna_seq=(row[17])
                 aa_seq=(row[18])
                 # Check exact syntax
-                # rn = rep_name
-                # rn.name = c_name
-                # db.session.add(rn)
-                # db.session.commit()
-                #rc=rep_class
-                #rc.name = c_name
-                # db.session.add(rc)
-                # db.session.commit(rc)
+                #rn = rep_name
+                #rn = Rep (rn=repName)
+                #db.session.add(rn)
+                #db.session.commit()
+
+                #rc = rep_class
+                #rc = Rep_class(rc=repClass)
+                #db.session.add(rc)
+                #db.session.commit()
+
                 #rf=rep_family
-                #rf.name = c_name
-                # db.session.add(rf)
-                # db.session.commit(rf)
-                #ds=dna_seq
-                #ds.name = c_name
-                # db.session.add(ds)
-                # db.session.commit(ds)
+                #rf = Rep_family(rf=repFamily)
+                #db.session.add(rf)
+                #db.session.commit()
+
                 #as=aa_seq
-                #as.name = c_name
-                # db.session.add(as)
-                # db.session.commit(as)
+                #as= Translated_products(as=aaseq)
+                #db.session.add(as)
+                #db.session.commit()
