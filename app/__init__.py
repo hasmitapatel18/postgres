@@ -15,4 +15,9 @@ def create_app(config_name):
     db.init_app(app)
     migrate = Migrate(app, db)
     from app import models
+
+    from .querypg import querypg as querypg_blueprint
+    app.register_blueprint(querypg_blueprint)
+
+
     return app
