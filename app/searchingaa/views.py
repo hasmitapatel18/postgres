@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template
 
-from . import querypg
+from . import searchingaa
 
 from app import db
 
@@ -12,8 +12,8 @@ from app.models import Information
 
 
 
-@querypg.route('/')
-def querypg():
+@searchingaa.route('/')
+def searchingaa():
     aaseqquery='SAATLESGMAVLQNDTIWPSNSTPRYIPKKNCSYSNKYMYVHSSIIQNSQKTLGNNGPAMDEWINKL*YIPTTEHSSTIKRNKVLETCYNMGEPQKYHAK*RK*DTKCHILYGFIYMKYLE*ANSQRQKADCGGKGWWRGRMSSNCLMG**KRPGTRRKQ*LHNTINGLNPTELSTLNWLTLYSVNFTLILK'
     aaquery=Information.query.filter_by(aa_seq=aaseqquery).first()
     class_search= (aaquery.rep_rep.rep_family.rep_class)
@@ -21,4 +21,4 @@ def querypg():
     name_search= (aaquery.rep_rep)
 
 
-    return render_template('querypg.html', class_search=class_search, family_search=family_search, name_search=name_search)
+    return render_template('searchingaa.html', class_search=class_search, family_search=family_search, name_search=name_search)

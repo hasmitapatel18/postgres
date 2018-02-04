@@ -1,10 +1,31 @@
 <html>
   <head>
-    <title>database</title>
+    <title>peptide search</title>
 
   </head>
   <body>
-    <h1>Class name</h1>
-      <div>{{searchname.name}}</div>
+
+
+  <table bgcolor="DCC7EC" bordercolor="AE6EEE" align="center" border="3" cellspacing="5" cellpadding="10">
+    <tr align="center">
+      <th colspan="2"><font size="6">Peptide Search Results</font></th>
+    </tr>
+
+    <tr align="center">
+      <th width="50%"><font size="4">Retroelement name</font></th>
+      <td width="50%"><font size="4">{{name_search.name}}</font></td>
+    </tr>
+
+
+    <tr align="center">
+      <th width="50%"><font size="4">Family name</font></th>
+      <td width="50%"><font size="4">{{family_search.name}}</font></td>
+   </tr>
+
+   <tr align="center">
+     <th width="50%"><font size="4">Class name</font></th>
+     <td width="50%"><font size="4">{{class_search.name}}</font></td>
+  </table>
+
   </body>
 </html>

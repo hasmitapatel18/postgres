@@ -19,5 +19,5 @@ def create_app(config_name):
     from .querypg import querypg as querypg_blueprint
     app.register_blueprint(querypg_blueprint)
 
-
-    return app
+    from .searchingaa import searchingaa as searchingaa_blueprint
+    app.register_blueprint(searchingaa_blueprint, url_prefix='/searchingaa')
