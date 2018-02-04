@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, request
 
 from . import searchingaa
 
@@ -14,11 +14,7 @@ from app.models import Information
 
 @searchingaa.route('/')
 def searchingaa():
-    aaseqquery='SAATLESGMAVLQNDTIWPSNSTPRYIPKKNCSYSNKYMYVHSSIIQNSQKTLGNNGPAMDEWINKL*YIPTTEHSSTIKRNKVLETCYNMGEPQKYHAK*RK*DTKCHILYGFIYMKYLE*ANSQRQKADCGGKGWWRGRMSSNCLMG**KRPGTRRKQ*LHNTINGLNPTELSTLNWLTLYSVNFTLILK'
-    aaquery=Information.query.filter_by(aa_seq=aaseqquery).first()
-    class_search= (aaquery.rep_rep.rep_family.rep_class)
-    family_search= (aaquery.rep_rep.rep_family)
-    name_search= (aaquery.rep_rep)
-
-
-    return render_template('searchingaa.html', class_search=class_search, family_search=family_search, name_search=name_search)
+    class_name = request.args.get('class_name')
+    rep_class = Rep_class.query.filter_by(name=class_name).first()
+    rep_families = rep_class.rep_families
+    return render_template('searchingaa.html',rep_families=rep_families)
