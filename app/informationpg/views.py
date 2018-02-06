@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template, request
 
-from . import searchingaa
+from . import informationpg
 
 from app import db
 
@@ -12,7 +12,9 @@ from app.models import Information
 
 
 
-@searchingaa.route('/')
-def searchingaa():
-    
-    return render_template('searchingaa.html')
+@informationpg.route('/')
+def informationpg():
+
+
+
+    return render_template('informationpg.html', title="information")

@@ -16,8 +16,23 @@ def create_app(config_name):
     migrate = Migrate(app, db)
     from app import models
 
+    from .homepage import homepage as homepage_blueprint
+    app.register_blueprint(homepage_blueprint)
+
     from .querypg import querypg as querypg_blueprint
-    app.register_blueprint(querypg_blueprint)
+    app.register_blueprint(querypg_blueprint, url_prefix='/querypg')
+
+    from .classespg import classespg as classespg_blueprint
+    app.register_blueprint(classespg_blueprint, url_prefix='/classespg')
+
+    from .familiespg import familiespg as familiespg_blueprint
+    app.register_blueprint(familiespg_blueprint, url_prefix='/familiespg')
+
+    from .namespg import namespg as namespg_blueprint
+    app.register_blueprint(namespg_blueprint, url_prefix='/namespg')
+
+    from .informationpg import informationpg as informationpg_blueprint
+    app.register_blueprint(informationpg_blueprint, url_prefix='/informationpg')
 
     from .searchingaa import searchingaa as searchingaa_blueprint
     app.register_blueprint(searchingaa_blueprint, url_prefix='/searchingaa')

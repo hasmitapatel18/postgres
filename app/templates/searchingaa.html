@@ -1,3 +1,26 @@
-{% for family in rep_families %}
-{{family.name}}<br>
-{% endfor %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>aa searchbar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <h1>Enter peptide sequences</h1>
+    <div class="search">
+      <form action="/querypg" >
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search peptide sequences..." name="aaseqquery"/>
+          <div class="input-group-btn">
+            <button class="btn btn-default" type="submit">&#128269;</button>
+      </form>
+          </div>
+        </div>
+
+      </form>
+    </div>
+
+
+  </body>
+</html>

@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, request
 
 from . import querypg
 
@@ -12,9 +12,11 @@ from app.models import Information
 
 
 
+
+
 @querypg.route('/')
 def querypg():
-    aaseqquery='SAATLESGMAVLQNDTIWPSNSTPRYIPKKNCSYSNKYMYVHSSIIQNSQKTLGNNGPAMDEWINKL*YIPTTEHSSTIKRNKVLETCYNMGEPQKYHAK*RK*DTKCHILYGFIYMKYLE*ANSQRQKADCGGKGWWRGRMSSNCLMG**KRPGTRRKQ*LHNTINGLNPTELSTLNWLTLYSVNFTLILK'
+    aaseqquery= request.args.get('aaseqquery')
     aaquery=Information.query.filter_by(aa_seq=aaseqquery).first()
     class_search= (aaquery.rep_rep.rep_family.rep_class)
     family_search= (aaquery.rep_rep.rep_family)
