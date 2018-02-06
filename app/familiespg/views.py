@@ -14,6 +14,11 @@ from app.models import Information
 
 @familiespg.route('/')
 def familiespg():
-    family_name = request.args.get('family_name')
-    rep_family = Rep_family.query.all()
+    class_name = request.args.get('class_name')
+    if class_name == None:
+        rep_family = Rep_family.query.all()
+    else:
+        rep_family = Rep_family.query.join(Rep_class).filter(Rep_class.name == class_name)
+
+
     return render_template('familiespg.html',rep_family=rep_family)
