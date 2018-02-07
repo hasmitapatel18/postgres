@@ -1,5 +1,95 @@
-This is the retroelement names<br>
-{% for info in rep_info %}
-{{info.name}}
 <br>
+
+{% for info in rep_info %}
+
+<table bgcolor="DCC7EC" bordercolor="AE6EEE" align="center" border="3" cellspacing="5" cellpadding="10">
+  <tr align="center">
+    <th colspan="2"><font size="6">Information</font></th>
+  </tr>
+
+  <tr align="center">
+    <th width="50%"><font size="4">sw score</font></th>
+    <td width="50%"><font size="4">{{info.sw_score}}</font></td>
+  </tr>
+
+  <tr align="center">
+    <th width="50%"><font size="4">mili div</font></th>
+    <td width="50%"><font size="4">{{info.mili_div}}</font></td>
+  </tr>
+
+  <tr align="center">
+    <th width="50%"><font size="4">mili del</font></th>
+    <td width="50%"><font size="4">{{info.mili_del}}</font></td>
+  </tr>
+
+  <tr align="center">
+    <th width="50%"><font size="4">mili ins</font></th>
+    <td width="50%"><font size="4">{{info.mili_ins}}</font></td>
+  </tr>
+
+  <tr align="center">
+    <th width="50%"><font size="4">chromosome number</font></th>
+    <td width="50%"><font size="4">{{info.geno_name}}</font></td>
+  </tr>
+
+
+  <tr align="center">
+    <th width="50%"><font size="4">geno start</font></th>
+    <td width="50%"><font size="4">{{info.geno_start}}</font></td>
+  </tr>
+
+  <tr align="center">
+    <th width="50%"><font size="4">geno end</font></th>
+    <td width="50%"><font size="4">{{info.geno_end}}</font></td>
+  </tr>
+
+  <tr align="center">
+    <th width="50%"><font size="4">geno left</font></th>
+    <td width="50%"><font size="4">{{info.geno_left}}</font></td>
+  </tr>
+
+  <tr align="center">
+    <th width="50%"><font size="4">rep start</font></th>
+    <td width="50%"><font size="4">{{info.rep_start}}</font></td>
+  </tr>
+
+  <tr align="center">
+    <th width="50%"><font size="4">rep end</font></th>
+    <td width="50%"><font size="4">{{info.rep_end}}</font></td>
+  </tr>
+
+  <tr align="center">
+    <th width="50%"><font size="4">rep left</font></th>
+    <td width="50%"><font size="4">{{info.rep_left}}</font></td>
+  </tr>
+
+</table>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<table bgcolor="DCC7EC" bordercolor="AE6EEE" align="center" border="3" cellspacing="5" cellpadding="10">
+
+    <td colspan="2"><b><font size="6">Nucleic acid information</font></b></td>
+
+
+  <tr align="center">
+   <th width="50%"><font size="4">DNA sequence</font></th>
+   <td width="50%"><font size="4">{{info.dna_seq}}</font></td>
+ </tr>
+
+
+
+   <th width="50%"><font size="4">Amino acid sequence</font></th>
+   <td width="50%"><font size="4">{{info.aa_seq}}</font></td>
+
+
+
+
+</table>
+
+
+
 {% endfor %}
