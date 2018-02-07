@@ -66,6 +66,9 @@ class CSVImport:
                 info.geno_start=geno_start
                 info.geno_end=geno_end
                 info.geno_left=geno_left
+                info.name=rep_name
+                info.rclass=rep_class_name
+                info.rfamily=rep_family_name
                 info.rep_start=rep_start
                 info.rep_end=rep_end
                 info.rep_left=rep_left

@@ -43,6 +43,8 @@ class Information(db.Model):
     geno_start=db.Column(db.Integer)
     geno_end=db.Column(db.Integer)
     geno_left=db.Column(db.Integer)
+    rclass= db.Column(db.String(100))
+    rfamily= db.Column(db.String(100))
     rep_start=db.Column(db.Integer)
     rep_end=db.Column(db.Integer)
     rep_left=db.Column(db.Integer)
