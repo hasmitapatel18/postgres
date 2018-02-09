@@ -30,6 +30,7 @@ def classespg():
     class_name = request.args.get('class_name')
     rep_class = Rep_class.query.all()
 
+    # Prepare pie chart data
     pie_chart_data = []
     total_count = 0
 

@@ -1,110 +1,73 @@
-<br>
-
-{% for info in rep_info %}
-<h3>name={{info.name}}</h3>
-
-<h3>class={{info.rclass}}</h3>
-
-<h3>family={{info.rfamily}}</h3>
 
 <br>
-<br>
-<br>
-<br>
-<br>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-  <table bgcolor="FFFFFF" bordercolor="AE6EEE" align="center" border="3" cellspacing="5" cellpadding="10">
-    <tr align="center">
-      <th colspan="2"><font size="6"> {{info.name}} information</font></th>
+
+
+
+<table>
+
+
+    <tr align="left">
+      <th colspan="13"><font size="6">  Translated products data </font></th>
     </tr>
 
-    <tr align="center">
+
+
+
+    <tr>
+      <th width="100"><font size="4">retroelement name</font></th>
       <th width="50%"><font size="4">sw score</font></th>
-      <td width="50%"><font size="4">{{info.sw_score}}</font></td>
-    </tr>
-
-    <tr align="center">
       <th width="50%"><font size="4">mili div</font></th>
-      <td width="50%"><font size="4">{{info.mili_div}}</font></td>
-    </tr>
-
-    <tr align="center">
       <th width="50%"><font size="4">mili del</font></th>
-      <td width="50%"><font size="4">{{info.mili_del}}</font></td>
-    </tr>
-
-    <tr align="center">
       <th width="50%"><font size="4">mili ins</font></th>
-      <td width="50%"><font size="4">{{info.mili_ins}}</font></td>
-    </tr>
-
-    <tr align="center">
       <th width="50%"><font size="4">chromosome number</font></th>
-      <td width="50%"><font size="4">{{info.geno_name}}</font></td>
-    </tr>
-
-
-    <tr align="center">
       <th width="50%"><font size="4">geno start</font></th>
-      <td width="50%"><font size="4">{{info.geno_start}}</font></td>
-    </tr>
-
-    <tr align="center">
       <th width="50%"><font size="4">geno end</font></th>
-      <td width="50%"><font size="4">{{info.geno_end}}</font></td>
-    </tr>
-
-    <tr align="center">
       <th width="50%"><font size="4">geno left</font></th>
-      <td width="50%"><font size="4">{{info.geno_left}}</font></td>
-    </tr>
-
-    <tr align="center">
       <th width="50%"><font size="4">rep start</font></th>
-      <td width="50%"><font size="4">{{info.rep_start}}</font></td>
-    </tr>
-
-    <tr align="center">
       <th width="50%"><font size="4">rep end</font></th>
-      <td width="50%"><font size="4">{{info.rep_end}}</font></td>
-    </tr>
-
-    <tr align="center">
       <th width="50%"><font size="4">rep left</font></th>
+      <th align="left" width="50%"><font size="4">DNA sequence</font></th>
+      <th align="left" width="50%"><font size="4">Amino acid sequence</font></th>
+
+    </tr>
+
+    {% for info in rep_info %}
+    <tr>
+      <td width="50%"><font size="4">{{info.name}}</font></td>
+      <td width="50%"><font size="4">{{info.sw_score}}</font></td>
+      <td width="50%"><font size="4">{{info.mili_div}}</font></td>
+      <td width="50%"><font size="4">{{info.mili_del}}</font></td>
+      <td width="50%"><font size="4">{{info.mili_ins}}</font></td>
+      <td width="50%"><font size="4">{{info.geno_name}}</font></td>
+      <td width="50%"><font size="4">{{info.geno_start}}</font></td>
+      <td width="50%"><font size="4">{{info.geno_end}}</font></td>
+      <td width="50%"><font size="4">{{info.geno_left}}</font></td>
+      <td width="50%"><font size="4">{{info.rep_start}}</font></td>
+      <td width="50%"><font size="4">{{info.rep_end}}</font></td>
       <td width="50%"><font size="4">{{info.rep_left}}</font></td>
-    </tr>
-
-  </table>
-
-
-  <table bgcolor="FFFFFF" bordercolor="001463" align="center" border="3" cellspacing="5" cellpadding="10">
-
-    <td colspan="2"><b><font size="6">Nucleic acid information</font></b></td>
-
-
-    <tr align="center">
-      <th width="50%"><font size="4">DNA sequence</font></th>
       <td width="50%"><font size="4">{{info.dna_seq}}</font></td>
+      <td width="50%"><font size="4">{{info.aa_seq}}</font></td>
+
     </tr>
-
-
-
-    <th width="50%"><font size="4">Amino acid sequence</font></th>
-    <td width="50%"><font size="4">{{info.aa_seq}}</font></td>
-
-
-
-
-  </table>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-
 
 {% endfor %}
+  </table>
+
+
+
+
+  <style>
+  table, th , td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+  }
+  table tr:nth-child(odd) {
+    background-color: #E8E5F5;
+  }
+  table tr:nth-child(even) {
+    background-color: #ffffff;
+  }
+  </style>
