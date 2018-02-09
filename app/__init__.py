@@ -30,23 +30,8 @@ def classespg():
     class_name = request.args.get('class_name')
     rep_class = Rep_class.query.all()
 
-    # Prepare pie chart data
-    pie_chart_data = []
-    total_count = 0
 
-    for rc in rep_class:
-        total_count+= len(rc.rep_families)
-
-    for rc in rep_class:
-        dictionary = {}
-        label = rc.name
-        count = len(rc.rep_families)
-        dictionary['label'] = label
-        dictionary['count'] = count
-        dictionary['y'] = count / total_count
-        pie_chart_data.append(dictionary)
-
-    return render_template('classespg.html',rep_class=rep_class, pie_chart_data=pie_chart_data)
+    return render_template('classespg.html',rep_class=rep_class)
 
 @app.route('/familiespg/')
 def familiespg():

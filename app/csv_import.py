@@ -10,7 +10,7 @@ import sys
 #setting the max size of fields to maximum
 class CSVImport:
     def import_csv_to_db(self):
-        with open('../rawfinal.csv', 'r') as csvfile:
+        with open('test.csv', 'r') as csvfile:
             reader = csv.reader(csvfile, delimiter=',')
             next(reader, None)  # skip the headers
             for row in reader:
@@ -23,6 +23,7 @@ class CSVImport:
                 geno_start=(row[6])
                 geno_end=(row[7])
                 geno_left=(row[8])
+                strand=(row[9])
                 rep_name=(row[10])
                 rep_class_name=(row[11])
                 rep_family_name=(row[12])
@@ -66,6 +67,7 @@ class CSVImport:
                 info.geno_start=geno_start
                 info.geno_end=geno_end
                 info.geno_left=geno_left
+                info.strand=strand
                 info.name=rep_name
                 info.rclass=rep_class_name
                 info.rfamily=rep_family_name
