@@ -66,7 +66,7 @@ def informationpg():
         rep_info=Information.query.join(Rep,Rep_family,Rep_class)\
         .filter(Rep.name==rep_name and Rep_family.name == family_name and Rep_class.name == class_name)
 
-    return render_template('informationpg.html', rep_info=rep_info, rep_name=rep_name)
+    return render_template('informationpg.html', rep_info=rep_info, class_name=class_name, family_name=family_name, rep_name=rep_name)
 
 @app.route('/namespg/')
 def namespg():

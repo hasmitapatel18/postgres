@@ -10,7 +10,7 @@ import sys
 #setting the max size of fields to maximum
 class CSVImport:
     def import_csv_to_db(self):
-        with open('../ORFs_final.csv', 'r') as csvfile:
+        with open('../2ORFs_final.csv', 'r') as csvfile:
             reader = csv.reader(csvfile, delimiter=',')
             next(reader, None)  # skip the headers
             for row in reader:
